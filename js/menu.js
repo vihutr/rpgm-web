@@ -1,6 +1,6 @@
 export default class Menu {
     constructor(x, y, options,
-        bgColor='rgb(30,30,30)', textColor='rgb(255,255,255)', alpha=1.0, font='../fonts/RM2000.ttf', font_size=20) {
+        bgColor='rgb(30,30,30)', textColor='rgb(255,255,255)', alpha=1.0, font='/rpgm-web/fonts/RM2000.ttf', font_size=20) {
        this.x = x
         this.y = y
         this.options = options;
