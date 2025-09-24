@@ -1,8 +1,8 @@
-import Spritesheet from "./spritesheet.js"
-import Menu from "./menu.js"
-import Player from "./player.js"
-import Grid from "./grid.js"
-import InputHandler from "./input.js"
+import Spritesheet from "./js/spritesheet.js"
+import Menu from "./js/menu.js"
+import Player from "./js/player.js"
+import Grid from "./js/grid.js"
+import InputHandler from "./js/input.js"
 
 let scene = "title"
 const canvas = document.getElementById("canvas")
@@ -23,20 +23,20 @@ title.alpha = 0.5
 title.x = canvas.width/2 - title.width/2
 title.y = canvas.height/2 - title.height/2
 let titlebg = new Image()
-titlebg.src = '../images/Plain.png'
+titlebg.src = './images/Plain.png'
 titlebg.onload = function() {
     console.log('titlebg loaded')
 }
 // file, spriteWidth, spriteHeight, margin, spacing
-var plf = new Spritesheet('../images/plf.png', 48, 48, 0, 0)
+var plf = new Spritesheet('./images/plf.png', 48, 48, 0, 0)
 var player = new Player(plf)
 
 var grid = new Grid(ctx)
 player.get_grid_dimensions(grid)
 
-var confirm1 = new Audio('../sounds/choice1.wav')
-var confirm2 = new Audio('../sounds/choice2.wav')
-var cancel1 = new Audio('../sounds/cancel1.wav')
+var confirm1 = new Audio('./sounds/choice1.wav')
+var confirm2 = new Audio('./sounds/choice2.wav')
+var cancel1 = new Audio('./sounds/cancel1.wav')
 confirm1.volume = .20
 confirm2.volume = .20
 cancel1.volume = .20
